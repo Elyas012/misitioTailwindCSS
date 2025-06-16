@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi sitio con Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-gray-800">
+  <!-- Menú de navegación -->
+  <nav class="bg-blue-700 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <a href="#" class="text-xl font-semibold text-white">Wiki Wuthering Waves</a>
+        </div>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+          <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Características</a>
+          <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+          <span class="text-gray-200 px-3 py-2 rounded-md text-sm font-medium cursor-not-allowed">FAQs</span>
+        </div>
+        <div class="md:hidden">
+          <button id="nav-toggle" class="text-white focus:outline-none text-2xl">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="nav-menu" class="hidden md:hidden bg-blue-800">
+      <a href="#" class="block text-white px-4 py-2">Home</a>
+      <a href="#" class="block text-white px-4 py-2">Características</a>
+      <a href="#" class="block text-white px-4 py-2">Blog</a>
+      <span class="block text-gray-200 px-4 py-2 cursor-not-allowed">FAQs</span>
+    </div>
+  </nav>
+
+  <!-- Carrusel de imágenes -->
+  <div class="relative overflow-hidden">
+    <div class="flex transition-transform duration-500" id="carousel">
+      <div class="min-w-full h-[640px] relative">
+        <img src="img/1.jpg_large" alt="Imagen 1" class="w-full h-1000 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+        <h5 class="text-4xl md:text-5xl font-extrabold drop-shadow-lg uppercase tracking-wide">v1.0.0</h5>
+        <p class="text-4xl md:text-5xl font-extrabold drop-shadow-lg mt-2 uppercase tracking-widest">Bienvenido a Huanglong</p>
+         </div>
+      </div>
+      <div class="min-w-full h-[640px] relative">
+        <img src="img/2.jpg" alt="Imagen 2" class="w-full h-800 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+          <h5 class="text-4xl md:text-5xl font-extrabold drop-shadow-lg uppercase tracking-wide">v2.0.0</h5>
+          <p class="text-4xl md:text-5xl font-extrabold drop-shadow-lg mt-2 uppercase tracking-widest">Bienvenido a Risnacita</p>
+        </div>
+      </div>
+      <div class="min-w-full h-[640px] relative">
+        <img src="img/3.jpg" alt="Imagen 3" class="w-full h-800 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+          <h5 class="text-4xl md:text-5xl font-extrabold drop-shadow-lg uppercase tracking-wide">v3.0.0</h5>
+          <p class="text-4xl md:text-5xl font-extrabold drop-shadow-lg mt-2 uppercase tracking-widest">Bienvenido a Riccioli Islands</p>
+        </div>
+      </div>
+    </div>
+    <!-- Botones anteriores y siguientes -->
+    <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 rounded-full focus:outline-none text-xl">
+      ‹
+    </button>
+    <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 rounded-full focus:outline-none text-xl">
+      ›
+    </button>
+  </div>
+
+  <!-- Sección de iconos -->
+  <div class="bg-white py-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 items-center text-center">
+      <img src="img/4.png" alt="Icono 1" class="mx-auto h-12">
+      <img src="img/5.png" alt="Icono 2" class="mx-auto h-12">
+      <img src="img/6.png" alt="Icono 3" class="mx-auto h-12">
+      <img src="img/7.png" alt="Icono 4" class="mx-auto h-12">
+      <img src="img/8.png" alt="Icono 5" class="mx-auto h-12">
+      <img src="img/9.png" alt="Icono 6" class="mx-auto h-12">
+    </div>
+  </div>
+
+  <!-- Sección "Acerca de" -->
+  <section class="max-w-7xl mx-auto mt-12 px-4 text-justify bg-red-50">
+    <h2 class="text-4xl font-semibold mb-6">ACERCA DE WHUTERING WAVES</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <p>Wuthering Waves es un RPG de acción de mundo abierto rico en historias con un alto grado de libertad Juego Kuro. Te despiertas de tu sueño como Rover, unido por un vibrante elenco de Resonadores en un viaje para recuperar tus recuerdos perdidos y superar el Lamento. <br>◆Características◆ <br>—— La civilización, devastada por el Lamento, renace / Adéntrate en un mundo creciente En este juego de mundo abierto, no solo puedes correr rápidamente, sino que también puedes convertirte en un maestro del parkour al superar todo tipo de obstáculos: volar, trepar hacia arriba, saltar entre paredes, usar el gancho para atravesar la ciudad... <br>—— Golpea rápido y pon a prueba tus habilidades y participa en combates ágiles y frenéticos Enfréntate a los ataques enemigos en combates suaves y rápidos. Aplica controles sencillos de Evasión, Contraataque evasivo, Habilidad de Eco y mecanismos únicos de QTE para ofrecer una experiencia de combate óptima.</p>
+      <div>
+        <p>Te damos la bienvenida, Errante. La marea desciende dejando un silencio pesado. Golpeada por la Lamentación, la humanidad y sus antiguas creaciones sufren como si se hubieran encallado en un arrecife. Sin embargo, contraatacan con un grito rompe el silencio. La calamidad que trae la destrucción también envía el resurgimiento. Un nuevo mundo ha nacido. Errante, este es solo el comienzo de la historia, la tuya. Amigos que conocer, adversarios que derrotar, poderes nuevos que obtener, verdades secretas que descubrir y espectáculos nunca antes vistos que contemplar. Un mundo inmenso de infinitas posibilidades te aguarda. Pero la elección es tuya. Sé la respuesta, sé el líder y sigue los sonidos para llegar a un nuevo futuro.. Partimos mientras la marea sube y baja. Levántate, Errante, esta es tu odisea.</p>
+        <div class="p-6 rounded-lg flex flex-col">
+        <a href="#" class="self-center block mx-auto bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de tarjetas -->
+<section class="max-w-7xl mx-auto mt-12 px-4 bg-red-50">
+  <div class="grid gap-8 md:grid-cols-3 text-justify">
+    <div class="p-6 rounded-lg flex flex-col">
+      <img src="img/10.webp" alt="Avatar" class="mx-auto h-60 w-32 object-cover rounded-full mb-4">
+      <h5 class="text-xl font-semibold mb-2 text-center">Carlotta</h5>
+      <p class="mb-4">Carlotta, la segunda hija de la estimada familia Montelli, encarna la nobleza innata y una apreciación refinada del arte. Su elegancia se combina con su espíritu poco convencional, desencadenado por la tradición. Para asegurar el futuro de su familia, alterna entre roles duales, abordando delicados "problemas" detrás de escena.</p>
+      <a href="#" class="self-center block mx-auto bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg">Historia</a>
+    </div>
+    <div class="p-6 rounded-lg flex flex-col">
+      <img src="img/11.webp" alt="Avatar" class="mx-auto h-60 w-32 object-cover rounded-full mb-4">
+      <h5 class="text-xl font-semibold mb-2 text-center">Cartethyia</h5>
+      <p class="mb-4">Los poderes del Centinela y Trenodiano chocan y se unen dentro de ella, impulsándola a un futuro incierto. Ya sea que el futuro sea brillante o tenue, sostendrá la espada firmemente y se enfrentará a todo lo que se le presente.</p>
+      <a href="#" class="self-center block mx-auto bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg">Historia</a>
+    </div>
+    <div class="p-6 rounded-lg flex flex-col">
+      <img src="img/12.webp" alt="Avatar" class="mx-auto h-60 w-32 object-cover rounded-full mb-4">
+      <h5 class="text-xl font-semibold mb-2 text-center">Camellya</h5>
+      <p class="mb-4">Bloom Bearer de Black Shores, Camellya es un personaje relajado libre de grilletes, con su aroma personal de "peligro." Intrigada por la creencia en el destino, deambula por las tierras por su propia voluntad, siguiendo una cadena de escenarios y su vaga guía.</p>
+      <a href="#" class="self-center block mx-auto bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg">Historia</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Pie de página -->
+  <footer class="bg-gray-800 text-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div><h5 class="font-semibold mb-2">• Home<br>• Características<br>• Blog<br>• FAQs</h5></div>
+      <div><h5 class="font-semibold mb-2">ACERCA DE EliasCorp<br>Contacto: 0987357111</h5></div>
+      <div>
+        <h5 class="font-semibold mb-2">REDES SOCIALES</h5>
+        <div class="flex space-x-4">
+          <img src="img/13.webp" alt="Red social 1" class="h-8">
+          <img src="img/14.webp" alt="Red social 2" class="h-8">
+          <img src="img/15.webp" alt="Red social 3" class="h-8">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para carrusel y menú móvil -->
+  <script>
+    const track = document.getElementById('carousel');
+    const slides = Array.from(track.children);
+    let index = 0;
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
